@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --lg: linear-gradient(
+    to right,
+    rgba(106, 219, 212, 0.5),
+    rgba(149, 175, 229, 0.5)
+  );
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-image: var(--lg), url("img.jpg");
+  display: grid;
+  place-items: center;
+  padding-inline: 2rem;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 700px;
+  background-color: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0 0.5rem 0.2rem rgb(53, 52, 52);
+}
+
+header {
+  text-align: center;
+  background-image: linear-gradient(
+    to left,
+    rgba(106, 219, 212, 1),
+    rgba(149, 175, 229, 1)
+  );
+  padding-block: 2rem;
+}
+header h1 {
+  font-weight: 500;
+  font-size: 2.2rem;
+}
+
+.form {
+  padding: 2rem;
+  position: relative;
+}
+
+label {
+  display: inline-block;
+  padding-bottom: 0.5rem;
+  font-weight: bold;
+}
+input {
+  min-width: 100%;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: 2px solid black;
+  border-radius: 0.5rem;
+}
+
+i {
+  position: absolute;
+  top: 4.2rem;
+  right: 3rem;
+  visibility: hidden;
+  font-size: 1.3em;
+}
+.form-control.success input {
+  border-color: green;
+}
+.form-control.error input {
+  border-color: coral;
+}
+.form-control.error .fa-xmark {
+  color: coral;
+  visibility: visible;
+}
+
+.form-control.success .fa-circle-check {
+  color: green;
+  visibility: visible;
+}
+.form-control.error .fa-xmark {
+  color: coral;
+  visibility: visible;
+}
+
+.error-message {
+  visibility: hidden;
+  color: coral;
+}
+.visible {
+  visibility: visible;
+}
+.visible-s {
+  color: green;
+}
+.submit-btn {
+  width: 100%;
+
+  background-image: linear-gradient(
+    to left,
+    rgba(106, 219, 212, 1),
+    rgba(149, 175, 229, 1)
+  );
+}
+
+.submit-btn:hover {
+  background-image: linear-gradient(
+    to right,
+    rgba(106, 219, 212, 1),
+    rgba(149, 175, 229, 1)
+  );
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

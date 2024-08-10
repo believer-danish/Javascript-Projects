@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="main-container" id="main">
+      <main class="hero-section">
+        <div class="big-logo">
+          <img src="big_quiz_logo.png" alt="quiz-logo" />
+        </div>
+        <button class="start" type="button" onclick="startQuiz()">
+          Start >>
+        </button>
+        <p id="highScore"></p>
+      </main>
+      <main class="quiz-section">
+        <audio src="correct.mp3" id="correctAudio"></audio>
+        <audio src="wrong.mp3" id="wrongAudio"></audio>
+        <header>
+          <div class="logo"><img src="quiz.svg" alt="quiz-logo" /></div>
+          <div class="sound-marks">
+            <div class="sound">
+              <img src="volumeUp.svg" alt="volume-up" id="volume" />
+            </div>
+
+            <div class="marks">
+              <span id="currentScore">00</span>/
+              <span>25</span>
+            </div>
+          </div>
+        </header>
+
+        <section class="quiz-content">
+          <h1 class="question">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
+            earum?
+          </h1>
+          <div class="timer">00</div>
+          <ul class="options">
+            <li>
+              <div id="option1"></div>
+              <div class="right">
+                <p class="message"></p>
+                <img src="" alt="" />
+              </div>
+            </li>
+
+            <li>
+              <div id="option2"></div>
+              <div class="right">
+                <p class="message"></p>
+                <img src="" alt="" />
+              </div>
+            </li>
+
+            <li>
+              <div id="option3"></div>
+              <div class="right">
+                <p class="message"></p>
+                <img src="" alt="" />
+              </div>
+            </li>
+
+            <li>
+              <div id="option4"></div>
+              <div class="right">
+                <p class="message"></p>
+                <img src="" alt="" />
+              </div>
+            </li>
+          </ul>
+        </section>
+        <div class="buttons">
+          <div class="error-message">Please select one option</div>
+          <button type="button" class="nxt-btn">Next ></button>
+        </div>
+      </main>
+
+      <main class="result-section dead">
+        <div class="result-logo">
+          <img src="quiz.svg" alt="" />
+          <h3>Result</h3>
+        </div>
+
+        <section class="progress-section">
+          <div id="greenLine">
+            <img src="green.png" alt="" />
+            <span id="greenText"></span>
+          </div>
+          <div class="progress">
+            <div class="right-ans"></div>
+            <div class="wrong-ans"></div>
+          </div>
+          <div id="redLine">
+            <img src="red.png" alt="" />
+            <span id="redText"></span>
+          </div>
+        </section>
+        <p id="resultMessage"></p>
+        <div class="retry">
+          <h2>“Keep learning, you have a good score!”</h2>
+          <button type="reset" class="retry-btn" onclick="resetPage()">
+            &lt;&lt; Retry
+          </button>
+        </div>
+      </main>
+    </main>
+  </body>
+</html>

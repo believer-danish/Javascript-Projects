@@ -1,0 +1,33 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(71, 68, 68);
+  color: white;
+}
+
+h1 {
+  padding: 10rem 0 2rem 10rem;
+  font-size: 5rem;
+}
+
+span {
+  color: orangered;
+}
+
+span::after {
+  content: "";
+  border-left: 2px solid orange;
+  animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+  to {
+    border-left: none;
+  }
+}

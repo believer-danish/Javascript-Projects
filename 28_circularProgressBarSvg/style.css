@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: gray;
+}
+
+.progress-bar {
+  --percent: 0;
+  background-color: yellow;
+  width: 15rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  position: relative;
+  text-align: center;
+}
+
+svg {
+  /* background-color: black; */
+  transform: rotate(-90deg);
+  border-radius: 50%;
+}
+circle {
+  
+  fill: red;
+  stroke: blue;
+  stroke-width: 20px;
+  stroke-dasharray: 314;
+  stroke-dashoffset: calc(314 - 314 * var(--percent));
+  stroke-linecap: round;
+  transition: all 2s linear;
+}
+
+span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  font-size: 1.4rem;
+}
+
+input {
+  margin-top: -20rem;
+  font-size: 2rem;
+  width: 10rem;
+  height: 4rem;
+}
+button {
+  font-size: 2rem;
+  width: 10rem;
+  height: 4rem;
+}

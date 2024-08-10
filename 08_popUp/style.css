@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: pink;
+  height: 100vh;
+}
+
+.popup-container {
+  background-color: rgb(160, 148, 148, 0.4);
+  /* position: fixed; */
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content {
+  position: absolute;
+  margin: auto;
+  background-color: white;
+  width: 90%;
+  max-width: 600px;
+  transform: scale(0);
+}
+
+.open-content {
+  transform: scale(1);
+}
+
+.open-container {
+  position: fixed;
+}
+
+span {
+  /* background-color: red; */
+  /* display: inline-block; */
+  margin-left: 95%;
+  text-align: end;
+  font-size: 3rem;
+}

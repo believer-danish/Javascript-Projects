@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-container {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("../assets/images/bg.jpg");
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  padding-inline: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.snake-game-container {
+  width: 100%;
+  max-width: 600px;
+  
+}
+
+.board {
+  opacity: 0.8;
+  width: 100%;
+  /* height: 100%; */
+  aspect-ratio: 1/1;
+  background-image: linear-gradient(rgb(135, 237, 135), rgb(233, 233, 134));
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+}
+
+.head,
+.snake-body {
+  border-radius: 0.5rem;
+}
+
+.head {
+  background-image: linear-gradient(purple,coral);
+  border: 2px solid black;
+  position: relative;
+}
+
+.snake-body {
+  background-image: linear-gradient(black,gray);
+}
+
+.food {
+  background-image: linear-gradient(red,yellow);
+  border: 4px solid purple;
+  border-radius: 50%;
+}
+
+.controls {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.score,
+.reset {
+  min-width: 20%;
+  background-color: red;
+  font-size: 2rem;
+  text-align: center;
+  padding: 1rem;
+}

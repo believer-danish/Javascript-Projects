@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/63a8715e79.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main class="container">
+      <main class="music-player">
+        <nav>
+          <div class="icon"><i class="fa-solid fa-chevron-left"></i></div>
+          <div class="icon"><i class="fa-solid fa-bars"></i></div>
+        </nav>
+        <section class="image-section">
+          <div class="image">
+            <img src="singer.jpg" alt="singer" />
+          </div>
+          <div class="text">
+            <h3>Honey Singh</h3>
+            <p>Blue Eyes</p>
+          </div>
+        </section>
+
+        <section class="audio-section">
+          <audio  src="song.mp3"></audio>
+          <input type="range" name="" id="progress" value="0" min="0" />
+        </section>
+
+        <section class="controls">
+          <div><i class="fa-solid fa-backward"></i></div>
+          <div><i class="fa-solid fa-play" id="play"></i></div>
+          <div><i class="fa-solid fa-forward"></i></div>
+        </section>
+      </main>
+    </main>
+  </body>
+</html>

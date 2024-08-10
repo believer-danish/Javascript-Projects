@@ -1,0 +1,79 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: gray;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.testing{
+    background-color: yellowgreen;
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap:2rem;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+.testing h2{
+    background-color: coral;
+    width: 100%;
+    padding: 1rem 0;
+}
+.testing h3{
+    width: 80%;
+    background-color: white;
+    padding:1rem;
+}
+
+.testing h3:hover{
+   background-color: lightblue;
+}
+
+
+.progressbar {
+  --size: 150px;
+  --bar-width: 20px; 
+ color:yellow;
+  width: var(--size);
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+  background:conic-gradient(blue var(--progress), rgb(15, 14, 14) 0%);
+
+
+  &::after {
+    content: attr(value-now) "%";
+    width: calc(100% - var(--bar-width));
+    aspect-ratio: 1/1;
+    background-color: white;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+  }
+
+}
+
+
+
+
+#example{
+  width: 150px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background:conic-gradient(red 50%,yellow 0%);
+}

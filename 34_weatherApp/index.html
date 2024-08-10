@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="danish webpage" />
+    <meta name="author" content="danish" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/63a8715e79.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <title>Weather App</title>
+  </head>
+
+  <body>
+    <main class="main-container">
+      <header>
+        <div class="search-bar">
+          <input
+            type="text"
+            name="search"
+            id="search-input"
+            placeholder="Enter Your Location"
+          />
+          <div class="search-logo">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+      </header>
+
+      <section class="content">
+        <header>
+          <div class="image">
+            <img class="main-image" src="images/images.jpeg" alt="logo" />
+          </div>
+          <div class="text">
+            <span class="temperature">0 °C</span>
+            <p class="temp-description">Light Rain</p>
+          </div>
+        </header>
+
+        <footer>
+          <div class="humidity">
+            <i class="fa-solid fa-droplet"></i>
+            <div class="text">
+              <span class="humidity-value">45%</span>
+              <p>Humidity</p>
+            </div>
+          </div>
+
+          <div class="wind">
+            <i class="fa-solid fa-wind"></i>
+            <div class="text">
+              <span class="wind-value">20km/h</span>
+              <p>Wind</p>
+            </div>
+          </div>
+        </footer>
+      </section>
+    </main>
+  </body>
+</html>

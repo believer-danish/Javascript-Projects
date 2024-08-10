@@ -1,0 +1,51 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  background: linear-gradient(to left, #8a2387, #e94057, #f27121);
+}
+header h1 {
+  text-align: center;
+}
+
+.ping-pong-table {
+  position: relative;
+  --size: 800px;
+  width: 100%;
+  max-width: var(--size);
+  aspect-ratio: 2/1;
+  border: 0.2rem solid black;
+  border-radius: 1rem;
+  margin: 5rem auto;
+  background-color: rgb(214, 187, 187);
+}
+
+.paddle {
+  position: absolute;
+  background-color: blue;
+  height: calc(var(--size) * 0.15);
+  width: calc(var(--size) * 0.02);
+  margin-left: 5px;
+  border-radius: 0.5rem;
+}
+
+.ball {
+  position: absolute;
+  background-color: red;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  width: calc(var(--size) * 0.03);
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+  padding: 1em;
+  font-size: 2rem;
+  font-weight: bold;
+}

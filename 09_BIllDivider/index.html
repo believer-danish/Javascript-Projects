@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bill Divider</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Bill Divider</h1>
+    </header>
+
+    <main class="main-container">
+      <section class="bill-input">
+        <label for="bill-amount">Bill </label>
+        <div class="bill-amount-container">
+          ₹
+          <input id="bill-amount" type="number" />
+        </div>
+
+        <p>Select Tip</p>
+        <div class="tip-container">
+          <div class="tip-item">5%</div>
+          <div class="tip-item">10%</div>
+          <div class="tip-item">15%</div>
+          <div class="tip-item">20%</div>
+          <div class="tip-item">25%</div>
+          <div class="tip-item">30%</div>
+        </div>
+
+        <div class="custom-tip-container">
+          <input
+            type="number"
+            name="custom-tip"
+            id="custom-tip"
+            placeholder="Custom Tip %"
+            disabled
+          />
+        </div>
+        <div class="people">
+          <p>No of People</p>
+          <input
+            type="number"
+            name="no-of-people"
+            id="no-of-people"
+            placeholder="Number of People"
+            disabled
+          />
+        </div>
+        <button class="generate-bill-btn">Generate Button</button>
+      </section>
+
+      <section class="bill-output">
+        <div class="output-amount">
+          <h3 class="tip-amount">Tip Amount : <span></span></h3>
+          <h3 class="total">Total : <span></span></h3>
+          <h3 class="each">Each Person Bill : <span></span></h3>
+        </div>
+
+        <button class="reset-btn">Reset</button>
+      </section>
+    </main>
+  </body>
+</html>

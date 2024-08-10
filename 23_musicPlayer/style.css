@@ -1,0 +1,118 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-music-player: rgb(248, 165, 207);
+}
+
+body {
+  font-family: Poppins, sans-serif;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgb(45, 45, 47);
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.music-player {
+  width: 100%;
+  max-width: 400px;
+  background-color: var(--clr-music-player);
+  min-height: 100px;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.icon {
+  width: 2rem;
+  background-color: white;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+i {
+  background-color: white;
+}
+
+.image-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+}
+.image {
+  width: 40%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid white;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+#progress {
+  appearance: none;
+  width: 100%;
+  height: 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background-color: rgb(246, 65, 156);
+  transition: all  0.1s ease;
+}
+
+#progress::-webkit-slider-thumb {
+  appearance: none;
+  width: 2rem;
+  height: 2rem;
+  background-color: hotpink;
+  border-radius: 50%;
+  border: 0.5rem solid white;
+}
+
+.controls {
+  /* background-color: red; */
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.controls div {
+  width: 4rem;
+  aspect-ratio: 1/1;
+  background-color: white;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color:hotpink;
+  font-size: 1.5rem;
+}
+
+.controls div:nth-child(2){
+    width: 6rem;
+    font-size: 2.5rem;
+}

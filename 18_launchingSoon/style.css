@@ -1,0 +1,71 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Poppins, sans-serif;
+  color: white;
+}
+
+.container {
+  height: 100vh;
+  background-image: url("images/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+}
+header h1 {
+  padding: 2rem 5rem;
+  color: white;
+}
+
+.content {
+  flex-grow: 1;
+
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-left: 5rem;
+  font-size: 1.2rem;
+}
+
+.content h1 {
+  font-size: 3rem;
+}
+.content h1 span {
+  color: coral;
+}
+
+.countdown {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.rocket {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  animation: up 3s cubic-bezier(1, 0.02, 1, 0.85) infinite;
+}
+img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+@keyframes up {
+  0% {
+    bottom: 0;
+    right: 0;
+  }
+  100% {
+    bottom: 100%;
+    right: 0;
+  }
+}

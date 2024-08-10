@@ -1,0 +1,106 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+body {
+  min-height: 100dvh;
+  background: linear-gradient(to right, purple, rgb(232, 91, 232));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.main-container {
+  width: 100%;
+  max-width: 600px;
+  background-color: white;
+  padding: 2rem 1rem;
+  height: 100%;
+  max-height: 900px;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.search-bar {
+  border: 2px solid black;
+  padding: 1rem;
+  display: flex;
+  font-size: 2rem;
+  border-radius: 0.5rem;
+}
+
+.search-bar input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 2rem;
+}
+
+input::placeholder {
+  color: green;
+  font-size: clamp(1rem, 1rem + 1vw, 4rem);
+}
+
+.search-logo:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.content {
+  /* background-color: red; */
+  height: 100%;
+}
+
+.content header {
+  /* background-color: blue; */
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.content header .image {
+  width: 100%;
+  /* background-color: yellow; */
+}
+
+img {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+}
+
+.text span {
+  font-size: calc(1rem + 1vmax);
+  font-weight: bold;
+}
+.text p {
+  font-size: 1.5rem;
+}
+
+
+footer{
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.humidity,.wind{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:1rem;
+}
+
+.humidity i,.wind i{
+    font-size: 2rem;
+}

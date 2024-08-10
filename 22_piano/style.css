@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: chocolate;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.piano{
+    display: flex;
+}
+
+.white{
+    width: 100px;
+    height: 400px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.black{
+    width: 50px;
+    height: 200px;
+    background-color: black;
+    margin-left:-3rem;
+    margin-right: -1.5rem;
+    z-index: 2;
+}
+
+
+.white.active{
+    background-color: #a7a0a0;
+}
+
+.black.active{
+    background-color: rgb(127, 124, 124);
+}

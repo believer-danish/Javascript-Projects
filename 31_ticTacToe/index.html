@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="main-container">
+      <header>
+        <h1>TIC TAC TOE</h1>
+      </header>
+      <section class="start-game">
+        <h1>Select Players:</h1>
+        <div class="players">
+          <button class="one-player">One Player</button>
+          <button class="two-player">Two Player</button>
+        </div>
+        <div class="x-o">
+            <button id="xBtn">X</button>
+            <button id="oBtn">O</button>
+        </div>
+      </section>
+      <main class="tic-tac-toe-app" id="d">
+        <div class="grid-container">
+            <div class="line"></div>
+          <div class="box bt-0 bl-0"></div>
+          <div class="box bt-0"></div>
+          <div class="box bt-0 br-0"></div>
+          <div class="box bl-0"></div>
+          <div class="box"></div>
+          <div class="box br-0"></div>
+          <div class="box bl-0 bb-0"></div>
+          <div class="box bb-0"></div>
+          <div class="box bb-0 br-0"></div>
+        </div>
+        <section class="result-section">
+              <div class="result">X's Turn</div>
+              <img src="excited.gif" id="excitedGif">
+        </section>
+        <button id="reset">RESET</button>
+      </main>
+    </main>
+  </body>
+</html>

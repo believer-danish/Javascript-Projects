@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header h1 {
+  border-bottom: 0.5rem solid gray;
+  text-align: center;
+  padding: 2rem;
+}
+
+.counter-app {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3rem;
+}
+
+.count {
+  font-size: 3rem;
+}
+
+.btn button {
+  background-color: cyan;
+  width: 3rem;
+  aspect-ratio: 1/1;
+}
+
+button[type="reset"] {
+  background-color: cyan;
+  width: 6rem;
+  height: 3rem;
+}
+
+input {
+  width: 4rem;
+  height: 2rem;
+}

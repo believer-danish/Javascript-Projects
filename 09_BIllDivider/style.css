@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: sans-serif;
+  padding-inline: 1rem;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 3rem;
+  padding-block: 1rem;
+  border-bottom: 2px solid gray;
+}
+
+.main-container {
+  width: 100%;
+  max-width: 700px;
+  /* background-color: yellow; */
+  margin: 5rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 1rem;
+}
+
+.bill-input {
+  /* background-color: pink; */
+  color: #594bf5;
+  font-size: 1.5rem;
+}
+
+.bill-output {
+  background-color: #34568b;
+  border-radius: 0.7rem;
+  color: white;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  font-size: 1.5rem;
+  justify-content: space-between;
+}
+
+#bill-amount {
+  border: none;
+  outline: none;
+  padding-left: 1rem;
+  width: 100%;
+  /* background-color: red; */
+  height: 100%;
+  padding: 0.5rem;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  /* -moz-appearance: textfield; */
+
+  font-size: 1.2rem;
+}
+
+.bill-amount-container {
+  border: 1px solid black;
+  overflow: hidden;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  margin-block: 1rem;
+  padding-left: 1rem;
+}
+
+.tip-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.5rem;
+  padding-block: 0.5rem;
+}
+
+.tip-item {
+  text-align: center;
+  color: gray;
+  border-radius: 0.5rem;
+  padding-block: 0.5rem;
+  cursor: not-allowed;
+}
+
+#custom-tip,
+#no-of-people {
+  background-color: rgb(192, 188, 188);
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  margin-block: 0.7rem;
+  cursor: not-allowed;
+  color: black;
+}
+
+.generate-bill-btn {
+  width: 100%;
+  border: none;
+  /* background-color: #9c60ff; */
+  font-size: 1.5rem;
+  padding-block: 0.5rem;
+  color: Gray;
+  cursor: pointer;
+  border-radius: 0.7rem;
+  cursor: not-allowed;
+}
+
+.reset-btn {
+  display: block;
+  width: 90%;
+  background-color: white;
+  font-size: 1.5rem;
+  padding-block: 0.5rem;
+  cursor: pointer;
+  border-radius: 0.7rem;
+  margin: 0 auto;
+  border: none;
+}
+
+h3 {
+  font-size: 0.8em;
+  padding-block: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.output-amount {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.tip-back {
+  background-color: #9c60ff;
+  color: white;
+  cursor: pointer;
+}
+
+.tip-outline {
+  outline: 0.3rem solid orange;
+}
+
+.gen-btn-style {
+  cursor: pointer !important;
+  background-color: #9c60ff;
+  color: white;
+}
