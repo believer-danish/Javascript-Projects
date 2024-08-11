@@ -9,7 +9,7 @@ console.log(data);
 function renderCountry(ele) {
   const newELement = document.createElement("a");
   console.log(location.href);
-  newELement.href = `${location.href}/country.html?name=${ele.name.common}`;
+  newELement.href = location.href + `country.html?name=${ele.name.common}`;
   newELement.innerHTML = ` <div class="country">
             <div class="country image">
               <img src="${ele.flags.svg}" alt="" />
