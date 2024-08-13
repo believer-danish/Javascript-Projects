@@ -60,27 +60,46 @@ function compPlay() {
       if (allBox[e[2]].innerText === comp) cnt++;
 
       if (cnt === 2) {
-        if (allBox[e[0]].innerText === "") allBox[e[0]].innerText = comp;
-        if (allBox[e[1]].innerText === "") allBox[e[1]].innerText = comp;
-        if (allBox[e[2]].innerText === "") allBox[e[2]].innerText = comp;
-        flag = true;
+        if (allBox[e[0]].innerText === "") {
+          allBox[e[0]].innerText = comp;
+          flag = true;
+        }
+        if (allBox[e[1]].innerText === "") {
+          allBox[e[1]].innerText = comp;
+          flag = true;
+        }
+        if (allBox[e[2]].innerText === "") {
+          allBox[e[2]].innerText = comp;
+          flag = true;
+        }
+      }
+
+      if (flag) {
+        count++;
+        changeTurn();
+        checkWin();
+        checkDraw();
+        return;
       }
       cnt = 0;
 
       if (allBox[e[0]].innerText === user) cnt++;
       if (allBox[e[1]].innerText === user) cnt++;
       if (allBox[e[2]].innerText === user) cnt++;
-      if (
-        allBox[e[0]].innerText === comp ||
-        allBox[e[1]].innerText === comp ||
-        allBox[e[2]].innerText === comp
-      )
-        cnt--;
+
       if (cnt === 2) {
-        if (allBox[e[0]].innerText === "") allBox[e[0]].innerText = comp;
-        if (allBox[e[1]].innerText === "") allBox[e[1]].innerText = comp;
-        if (allBox[e[2]].innerText === "") allBox[e[2]].innerText = comp;
-        flag = true;
+        if (allBox[e[0]].innerText === "") {
+          allBox[e[0]].innerText = comp;
+          flag = true;
+        }
+        if (allBox[e[1]].innerText === "") {
+          allBox[e[1]].innerText = comp;
+          flag = true;
+        }
+        if (allBox[e[2]].innerText === "") {
+          allBox[e[2]].innerText = comp;
+          flag = true;
+        }
       }
     }
   });
@@ -91,17 +110,19 @@ function compPlay() {
     checkDraw();
     return;
   }
-
-  for (let i = 0; i < 8; i++) {
-    if (allBox[i].innerText === "") {
-      allBox[i].innerText = comp;
-      break;
+  
+    for (let i = 0; i <= 8; i++) {
+      if (allBox[i].innerText === "") {
+        allBox[i].innerText = comp;
+        break;
+      }
     }
-  }
-  count++;
-  changeTurn();
-  checkWin();
-  checkDraw();
+
+    count++;
+    changeTurn();
+    checkWin();
+    checkDraw();
+  
 }
 
 function checkWin() {
@@ -126,10 +147,10 @@ function mark(e) {
   if (e.target != e.currentTarget && !gameOver && e.target.innerText === "") {
     e.target.innerText = turn;
     count++;
+    console.log(count);
     changeTurn();
     checkWin();
     checkDraw();
-
     if (turn === comp) {
       compPlay();
     }

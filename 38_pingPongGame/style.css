@@ -28,7 +28,7 @@ header h1 {
 .paddle {
   position: absolute;
   background-color: blue;
-  height: calc(var(--size) * 0.15);
+  height: calc(var(--size) * 0.1);
   width: calc(var(--size) * 0.02);
   margin-left: 5px;
   border-radius: 0.5rem;
@@ -48,4 +48,17 @@ button {
   padding: 1em;
   font-size: 2rem;
   font-weight: bold;
+}
+
+.updown {
+  display: none;
+  margin-top: 2rem;
+
+  font-size: 1rem;
+}
+
+@media (width <= 600px) {
+  .updown {
+    display: flex;
+  }
 }

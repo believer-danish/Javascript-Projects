@@ -11,18 +11,31 @@ let id;
 let py = 10;
 let paddleY = 0;
 let prev = 0;
+let flag = true;
 
-document.addEventListener("click", () => {
+document.querySelector(".start").addEventListener("click", () => {
   ballX = 50;
-  ballY = Math.floor(Math.random() * (table.clientHeight - ball.offsetHeight) );
+  ballY = Math.floor(Math.random() * (table.clientHeight - ball.offsetHeight));
   py = 10;
   dx = dy = 2;
+  flag = true;
   clearInterval(id);
   gameEngine();
 });
 
-document.addEventListener("mousemove", (e) => { 
-  // console.log(e.clientY);
+document.getElementById("up").addEventListener("click", () => {
+  if (flag && paddleY > 0) paddleY += 10 * -1;
+  paddle.style.top = `${paddleY}px`;
+});
+
+document.getElementById("down").addEventListener("click", (e) => {
+  console.log('down');
+  if (flag && paddleY < table.clientHeight - paddle.clientHeight) paddleY += 10;
+   paddle.style.top = `${paddleY}px`;
+});
+
+
+document.addEventListener("pointermove", (e) => {
   if (e.clientY > prev && paddleY < table.clientHeight - paddle.clientHeight) {
     paddleY += py;
   } else if (e.clientY < prev && paddleY > 0) {
@@ -57,6 +70,7 @@ const gameEngine = () => {
     if (ballX <= 0) {
       clearInterval(id);
       py = 0;
+      flag = false;
     }
     if (ballX >= table.clientWidth - ball.offsetWidth) dx *= -1;
     if (ballY >= table.clientHeight - ball.offsetHeight || ballY <= 0) dy *= -1;
@@ -64,8 +78,8 @@ const gameEngine = () => {
     if (
       ballX <= paddle.offsetLeft + paddle.offsetWidth &&
       ballY <= paddle.offsetTop + paddle.offsetHeight &&
-      ballY + ball.offsetHeight >= paddle.offsetTop
-      && dx < 0
+      ballY + ball.offsetHeight >= paddle.offsetTop &&
+      dx < 0
     )
       dx *= -1;
   }, 1);

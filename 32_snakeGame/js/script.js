@@ -25,7 +25,7 @@ const foodLoc = {
 // Game Functions
 
 function changeDirection(e) {
-  musicAudio.play();
+  // musicAudio.play();
   switch (e.key) {
     case "ArrowUp":
       if (direction.y != 1) {
@@ -156,13 +156,36 @@ function resetFun() {
 document.addEventListener("keydown", changeDirection);
 reset.addEventListener("click", resetFun);
 
-let x;
-for (let i = 0; i < 10; i++){
-   x = document.createElement('div');
-  x.id = `myid${i}`;
-  x.innerText=`holupolu${i}`
-  if (i == 8)
-    debugger
-}
+document.querySelector(".music").addEventListener("click", () => {
+  if (musicAudio.play) musicAudio.pause();
+  else musicAudio.play();
+});
 
-console.log(myid9.id);
+document.querySelector(".mbcontrol").addEventListener("click", (e) => {
+  if (e.target != e.currentTarget) {
+    if (e.target.classList.contains("up")) {
+      if (direction.y != 1) {
+        direction.y = -1;
+        direction.x = 0;
+      }
+    } else if (e.target.classList.contains("down")) {
+      if (direction.y != -1) {
+        direction.y = 1;
+        direction.x = 0;
+      }
+    } else if (e.target.classList.contains("left")) {
+      if (direction.x != 1) {
+        direction.x = -1;
+        direction.y = 0;
+      }
+    } else if (e.target.classList.contains("right")) {
+      if (direction.x != -1) {
+        direction.x = 1;
+        direction.y = 0;
+      }
+    }
+  }
+});
+
+
+
