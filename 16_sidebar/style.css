@@ -14,7 +14,8 @@ body {
 
 .bar {
   display: block;
-
+  padding: 1rem;
+  background-color: coral;
   font-size: 2rem;
   margin: 2rem 2rem 2rem auto;
 }
@@ -51,6 +52,7 @@ li {
   list-style-type: none;
   padding-block: 1rem;
   width: 20rem;
+  cursor: pointer;
 }
 li:hover {
   background-color: lightblue;
@@ -65,8 +67,8 @@ li:hover {
   margin-left: 1rem;
 }
 
-.show{
-    transform: translate(0%);
+.show {
+  transform: translate(0%);
 }
 
 @media (width >=768px) {

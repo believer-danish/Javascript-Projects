@@ -8,6 +8,10 @@ body {
   background-color: pink;
   height: 100vh;
 }
+button {
+  background-color: blueviolet;
+  font-size: 2rem;
+}
 
 .popup-container {
   background-color: rgb(160, 148, 148, 0.4);

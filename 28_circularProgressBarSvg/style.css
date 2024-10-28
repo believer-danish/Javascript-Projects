@@ -13,8 +13,8 @@ body {
 
 .progress-bar {
   --percent: 0;
-  background-color: yellow;
-  width: 15rem;
+  /* background-color: yellow; */
+  width: 500px;
   aspect-ratio: 1/1;
   border-radius: 50%;
   position: relative;
@@ -27,12 +27,11 @@ svg {
   border-radius: 50%;
 }
 circle {
-  
   fill: red;
   stroke: blue;
   stroke-width: 20px;
-  stroke-dasharray: 314;
-  stroke-dashoffset: calc(314 - 314 * var(--percent));
+  stroke-dasharray: 630;
+  stroke-dashoffset: calc(630 - 630 * var(--percent));
   stroke-linecap: round;
   transition: all 2s linear;
 }
@@ -48,7 +47,7 @@ span {
 input {
   margin-top: -20rem;
   font-size: 2rem;
-  width: 10rem;
+  width: 20rem;
   height: 4rem;
 }
 button {
