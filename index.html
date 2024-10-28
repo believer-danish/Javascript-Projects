@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="ball"></div>
     <header>
       <h1>Javascript Projects for Beginners.</h1>
     </header>
@@ -128,4 +129,12 @@
       </div>
     </main>
   </body>
+  <script>
+    const ball = document.querySelector(".ball");
+
+    window.addEventListener("pointermove", (e) => {
+      ball.style.left = e.clientX - ball.offsetWidth / 2 + "px";
+      ball.style.top = e.clientY - ball.offsetHeight / 2 + "px";
+    });
+  </script>
 </html>
